@@ -180,7 +180,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="h-8 w-8 rounded-full bg-white shadow-lg flex items-center justify-center">
-              <span className="text-primary font-bold text-sm">CC</span>
+              <span className="text-primary font-bold text-sm">Ot.</span>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
             <a href="#" onClick={() => scrollToSection("hero")} className="flex items-center space-x-2 relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-sky-500 to-teal-500 rounded-full opacity-0 group-hover:opacity-25 blur-lg transition-all duration-500"></div>
               <span className="text-xl font-semibold text-gray-900 relative">
-                <span className="text-sky-600">Orbitt</span>
+                <span className="text-sky-600 font-[700]">Orbitt.</span>
               </span>
             </a>
 
@@ -366,7 +366,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                   <span className="mx-2">,</span>
                   <span className="relative">
                     Orbitt
-                    <span className="absolute -top-2 -right-8 text-2xl animate-pulse">🪐</span>
+                    <span className="absolute -top-2 -right-8 text-4xl animate-pulse">🪐</span>
                   </span>
                 </h1>
 
@@ -392,7 +392,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                     <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-full blur-md"></span>
                   </Button>
 
-                  <Button
+                  {/* <Button
                     variant="outline"
                     size="lg"
                     className="relative group overflow-hidden border-2 border-gray-200 hover:border-indigo-200 rounded-full px-8 transition-all duration-300"
@@ -402,7 +402,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                       <span className="ml-2">🌕</span>
                     </span>
                     <span className="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  </Button>
+                  </Button> */}
                 </div>
 
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
