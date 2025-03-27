@@ -1,7 +1,7 @@
 "use client"
 import type React from "react"
 import { useState, useEffect } from "react"
-import { Code, Users, BookOpen, MessageCircle, Calendar, Globe, Github, School, PlaneTakeoff, LucidePlaneTakeoff, SatelliteDish, Satellite, Users2, TrendingUp, EarthIcon } from "lucide-react"
+import { Code, Users, BookOpen, MessageCircle, Calendar, Globe, Github, School, PlaneTakeoff, LucidePlaneTakeoff, SatelliteDish, Satellite, Users2, TrendingUp, EarthIcon, PlaneLandingIcon, Globe2 } from "lucide-react"
 import {
   Zap,
   Inbox,
@@ -238,7 +238,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
 
             {/* Action Buttons */}
             <div className="flex items-center space-x-4">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="icon"
                 className="text-gray-600 hover:bg-gray-100 rounded-full transition-colors duration-300"
@@ -247,7 +247,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                 <a href="https://github.com/vvc10">
                   <Github className="h-5 w-5" />
                 </a>
-              </Button>
+              </Button> */}
 
               <Button
                 onClick={() => {
@@ -258,7 +258,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                      hover:from-sky-700 hover:to-teal-600 hidden sm:flex
                      rounded-full px-6 shadow-sm hover:shadow-md transition-all duration-300 relative group"
               >
-                <span className="relative z-10">Join Waitlist</span>
+                <span className="relative z-10">Join Launchpad</span>
                 <span className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></span>
               </Button>
 
@@ -320,7 +320,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                      hover:from-sky-700 hover:to-teal-600 
                      rounded-full shadow-sm hover:shadow-md"
               >
-                Join Waitlist
+                Join Launchpad
               </Button>
             </nav>
           </motion.div>
@@ -371,7 +371,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                 </h1>
 
                 <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-                  Join your campus galaxy where Moons (communities) collide. Earn Stardust for contributions,
+                  Join your campus galaxy where Moons (communities) collide. Earn Stars for contributions,
                   boost posts with Gravity, and launch your college journey into lightspeed.
                 </p>
 
@@ -386,7 +386,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                      hover:from-sky-700 hover:to-teal-600  rounded-full px-8 shadow-lg transition-all duration-300 hover:shadow-stardust"
                   >
                     <span className="relative z-10 flex items-center">
-                      Claim Your Orbit
+                      Join Launchpad
                       <Rocket className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </span>
                     <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-full blur-md"></span>
@@ -425,11 +425,11 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                     )}
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-sky-50 to-teal-50   
                      hover:from-sky-50 hover:to-teal-50  border-2 border-white shadow-sm flex items-center justify-center text-teal-700 font-medium text-xs hover:scale-110 transition-transform">
-                      1K+
+                      200+
                     </div>
                   </div>
                   <span className="text-sm text-gray-600">
-                    <span className="font-semibold text-teal-600">200+ astronauts</span> exploring their campus universe
+                    <span className="font-semibold text-teal-600">astronauts</span> exploring their campus universe
                     <span className="inline-block ml-1">🌠</span>
                   </span>
                 </div>
@@ -464,7 +464,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                         <div className="flex justify-between items-center mb-3">
                           <h3 className="font-semibold text-sm text-indigo-200 flex items-center gap-2">
                             <Rocket className="w-4 h-4 text-purple-400" />
-                            Active Orbitts
+                            Your Moons
                           </h3>
                           <span className="text-xs text-indigo-400/80">3 in progress</span>
                         </div>
@@ -500,7 +500,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                           <div className="p-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20">
                             <Star className="w-4 h-4 text-amber-400/90" />
                           </div>
-                          <h3 className="font-semibold text-sm text-amber-100/90">Stardust Bank</h3>
+                          <h3 className="font-semibold text-sm text-amber-100/90">Star Bank</h3>
                         </div>
                         <div className="space-y-1.5">
                           <div className="text-xl font-bold text-amber-200/90">1,428</div>
@@ -517,7 +517,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                           <div className="p-1.5 bg-sky-500/10 rounded-lg border border-sky-500/20">
                             <SatelliteDish className="w-4 h-4 text-sky-400/90" />
                           </div>
-                          <h3 className="font-semibold text-sm text-sky-100/90">Deep Space Comms</h3>
+                          <h3 className="font-semibold text-sm text-sky-100/90">Blackholes</h3>
                         </div>
                         <div className="space-y-1.5">
                           <div className="flex items-center justify-between text-xs text-sky-300/90">
@@ -625,38 +625,39 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                 delay={0.1}
               />
 
-              <FeatureCard
-                icon={Search}
-                title="Study Orbit"
-                description="Find notes, past papers & resources for your courses in 2 clicks"
-                delay={0.2}
-              />
+
 
               <FeatureCard
                 icon={CalendarCheck}
-                title="Time Orbit"
+                title="Gravity Alerts"
                 description="Auto-schedules study time around your classes & deadlines"
                 delay={0.3}
               />
 
               <FeatureCard
                 icon={Users}
-                title="Campus Circles"
-                description="Join groups for your interests - from basketball to book clubs"
+                title="Moons"
+                description="Join Your planet (Campus) & explore different related moons for your interests - from basketball to book clubs"
                 delay={0.4}
               />
 
               <FeatureCard
                 icon={Wallet}
-                title="Orbit Market"
+                title="Orbitt Market"
                 description="Buy/sell textbooks, dorm items & find student-friendly gigs"
                 delay={0.5}
               />
 
               <FeatureCard
                 icon={HeartPulse}
-                title="Orbit Support"
+                title="Moon Support"
                 description="24/7 access to counseling, health resources & peer support"
+                delay={0.6}
+              />
+              <FeatureCard
+                icon={Globe2}
+                title="Black Holes"
+                description="Private, anonymous spaces for sensitive topics (mental health, finances, etc.)"
                 delay={0.6}
               />
             </div>
@@ -679,7 +680,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
               >
                 <Badge className="mb-4 rounded-full bg-teal-50 text-teal-600 px-4 py-1.5 font-medium shadow-sm border border-indigo-200">
                   <Rocket className="mr-2 h-4 w-4" />
-              How Orbitt works?
+                  How Orbitt works?
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Your Campus
@@ -708,7 +709,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                     <Satellite className="h-8 w-8 text-teal-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-center text-gray-900 mb-3">
-                     Setup
+                    Setup
                   </h3>
                   <p className="text-gray-600 mb-4 text-center">
                     Secure student ID verification via .edu email or else
@@ -732,7 +733,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                     Orbitt Sync
                   </h3>
                   <p className="text-gray-600 mb-4 text-center">
-                    Auto-connects with classmates in your orbit
+                    Join your planet & get excess to all other moons (communities) orbitting around your planet.
                   </p>
                 </div>
               </motion.div>
@@ -788,63 +789,63 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
 
         {/* Testimonials */}
         <section id="testimonials" className="py-20 bg-gray-50 relative overflow-hidden">
-  <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent -z-10"></div>
-  <div className="absolute inset-0 -z-10 opacity-30 bg-[url('/grid-pattern.svg')]"></div>
+          <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent -z-10"></div>
+          <div className="absolute inset-0 -z-10 opacity-30 bg-[url('/grid-pattern.svg')]"></div>
 
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <Badge className="mb-4 rounded-full bg-teal-50 text-teal-500 px-4 py-1.5 font-medium">
-          <Rocket className="mr-2 h-4 w-4" />
-          Testimonials
-        </Badge>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Why Students
-          <span className="bg-gradient-to-r from-sky-500 to-teal-600 bg-clip-text text-transparent mx-2">
-            Orbitt
-          </span>
-          With Us
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Join 50K+ students navigating campus life with ease
-        </p>
-      </motion.div>
-    </div>
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
+                <Badge className="mb-4 rounded-full bg-teal-50 text-teal-500 px-4 py-1.5 font-medium">
+                  <Rocket className="mr-2 h-4 w-4" />
+                  Testimonials
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Students
+                  <span className="bg-gradient-to-r from-sky-500 to-teal-600 bg-clip-text text-transparent mx-2">
+                    Orbitt
+                  </span>
+                  With Us
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Join 50K+ students navigating campus life with ease
+                </p>
+              </motion.div>
+            </div>
 
-    <div className="grid md:grid-cols-3 gap-6">
-      <TestimonialCard
-        quote="From lost in communication black holes to organized orbit - Orbitt saved my academic journey!"
-        name="Akash Gupta"
-        role="Biochemistry · Stellar University"
-        avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Akash&hair=short01"
-        rating={4.9}
-        delay={0.1}
-      />
-      <TestimonialCard
-        quote="Found my study crew faster than a comet's tail! These orbit groups are magic 🌠"
-        name="Vedant Patil"
-        role="Computer Science · Tech Orbit Institute"
-        avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Vedant&hair=short02"
-        rating={5}
-        delay={0.2}
-      />
-      <TestimonialCard
-        quote="Orbitt became my campus navigation system - finally found order in the chaos!"
-        name="Pankaj Yadav"
-        role="Engineering · Cosmic College"
-        avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Pankaj&hair=short03"
-        rating={4.8}
-        delay={0.3}
-      />
-    </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <TestimonialCard
+                quote="From lost in communication black holes to organized orbit - Orbitt saved my academic journey!"
+                name="Akash Gupta"
+                role="Biochemistry · Stellar University"
+                avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Akash&hair=short01"
+                rating={4.9}
+                delay={0.1}
+              />
+              <TestimonialCard
+                quote="Found my study crew faster than a comet's tail! These orbit groups are magic 🌠"
+                name="Vedant Patil"
+                role="Computer Science · Tech Orbit Institute"
+                avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Vedant&hair=short02"
+                rating={5}
+                delay={0.2}
+              />
+              <TestimonialCard
+                quote="Orbitt became my campus navigation system - finally found order in the chaos!"
+                name="Pankaj Yadav"
+                role="Engineering · Cosmic College"
+                avatar="https://api.dicebear.com/9.x/pixel-art/svg?seed=Pankaj&hair=short03"
+                rating={4.8}
+                delay={0.3}
+              />
+            </div>
 
-    {/* Trust Badges */}
-    {/* <div className="mt-12 flex flex-wrap justify-center gap-6 opacity-75">
+            {/* Trust Badges */}
+            {/* <div className="mt-12 flex flex-wrap justify-center gap-6 opacity-75">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -876,8 +877,8 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
         <span>200+ Campus Orbits</span>
       </motion.div>
     </div> */}
-  </div>
-</section>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section id="faq" className="py-20 bg-white relative overflow-hidden">
@@ -930,50 +931,50 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
 
         {/* CTA Section */}
         <section className="py-20 relative overflow-hidden">
-  <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-teal-500 -z-10"></div>
-  <div className="absolute inset-0 bg-[url('/star-pattern.svg')] opacity-20 -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-teal-500 -z-10"></div>
+          <div className="absolute inset-0 bg-[url('/star-pattern.svg')] opacity-20 -z-10"></div>
 
-  <div className="container mx-auto px-4 text-center relative z-10">
-    <div className="max-w-3xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
-          Ready to Launch Your Campus Orbitt?
-          <Rocket className="ml-3 inline-block h-12 w-12 text-cyan-200 animate-float" />
-        </h2>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
+                  Ready to Launch Your Campus Orbitt?
+                  <Rocket className="ml-3 inline-block h-12 w-12 text-cyan-200 animate-float" />
+                </h2>
 
-        <p className="text-lg md:text-xl text-cyan-50 mb-8">
-          Join 200+ students navigating their campus universe
-          <EarthIcon className="ml-2 inline-block h-6 w-6 text-white/80" />
-        </p>
+                <p className="text-lg md:text-xl text-cyan-50 mb-8">
+                  Join 200+ students navigating their campus universe
+                  <EarthIcon className="ml-2 inline-block h-6 w-6 text-white/80" />
+                </p>
 
-        <Button
-          onClick={() => {
-            setIsSignUp(true)
-            setIsModalOpen(true)
-          }}
-          className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-sky-600 
+                <Button
+                  onClick={() => {
+                    setIsSignUp(true)
+                    setIsModalOpen(true)
+                  }}
+                  className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-sky-600 
             hover:bg-gray-50 hover:shadow-2xl transform hover:scale-105 
             transition-all duration-300 group relative overflow-hidden"
-        >
-          <span className="relative z-10 flex items-center justify-center">
-            Start Free Journey
-            <Rocket className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </span>
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.1)_0%,transparent_100%)]" />
-        </Button>
-      </motion.div>
+                >
+                  <span className="relative z-10 flex items-center justify-center">
+                    Start Free Journey
+                    <Rocket className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.1)_0%,transparent_100%)]" />
+                </Button>
+              </motion.div>
 
-      {/* Space Background Elements */}
-      <div className="absolute -top-20 -left-20 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl -z-10 animate-pulse-slow delay-1000" />
-    </div>
-  </div>
-</section>
+              {/* Space Background Elements */}
+              <div className="absolute -top-20 -left-20 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
+              <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl -z-10 animate-pulse-slow delay-1000" />
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
@@ -981,7 +982,7 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">             
+              <div className="flex items-center gap-2 mb-4">
                 <span className="font-bold text-xl">orbitt</span>
               </div>
               <p className="text-gray-400 mb-4">Connecting students. Empowering education.</p>
@@ -1002,8 +1003,8 @@ export default function Landing({ setLoginState, setOnboardingComplete }: Landin
                 <FooterLink text="FAQ" />
               </ul>
             </div>
- 
- 
+
+
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">

@@ -37,14 +37,14 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
 
             if (!querySnapshot.empty) {
 
-                setError("You're already on the waitlist!")
+                setError("You're already in!")
                 setTimeout(() => {
                     setSuccessMessage("")
                     onClose()
                 }, 1000)
             } else {
                 await addDoc(waitlistRef, { email, timestamp: new Date() })
-                setSuccessMessage("Successfully joined the waitlist!")
+                setSuccessMessage("Successfully entered 🚀!")
                 setEmail("")
 
                 setTimeout(() => {
@@ -66,7 +66,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
             <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
                 <DialogContent className="sm:max-w-md bg-white rounded-lg overflow-hidden">
                     <DialogHeader>
-                        <DialogTitle>Join the Waitlist</DialogTitle>
+                        <DialogTitle>Join Launchpad (launching soon) 🚀</DialogTitle>
                     </DialogHeader>
 
                     <form onSubmit={handleJoinWaitlist} className="space-y-4">
@@ -90,7 +90,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                         </div>
 
                         <Button type="submit" className="w-full bg-black text-white rounded-[5px] hover:bg-gray-800" disabled={isLoading}>
-                            {isLoading ? "Joining..." : "Join Waitlist"}
+                            {isLoading ? "Joining..." : "Join Launchpad"}
                         </Button>
                     </form>
                 </DialogContent>
